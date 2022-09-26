@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  learningdiary.web:
+    image: ${DOCKER_REGISTRY-}learningdiaryweb
+    build:
+      context: .
+      dockerfile: LearningDiary.Web/Dockerfile
+
+  learningdiary.api:
+    image: ${DOCKER_REGISTRY-}learningdiaryapi
+    build:
+      context: .
+      dockerfile: LearningDiary.API/Dockerfile
+
