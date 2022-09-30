@@ -9,12 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningDiary.API", "Learni
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{AD8816E0-6D2A-4330-A697-7F9CD12297E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningDiary.Application", "LearningDiary.Application\LearningDiary.Application.csproj", "{B53BC891-DD69-440F-84C4-4C2A8DF3D49E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningDiary.Domain", "LearningDiary.Domain\LearningDiary.Domain.csproj", "{572B9F7E-E8F2-4AC9-B546-CF253EB6DBFC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningDiary.Persistance", "LearningDiary.Persistance\LearningDiary.Persistance.csproj", "{949B8B16-3915-41F6-8A41-514D68429E9D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,18 +27,6 @@ Global
 		{AD8816E0-6D2A-4330-A697-7F9CD12297E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD8816E0-6D2A-4330-A697-7F9CD12297E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD8816E0-6D2A-4330-A697-7F9CD12297E0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B53BC891-DD69-440F-84C4-4C2A8DF3D49E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B53BC891-DD69-440F-84C4-4C2A8DF3D49E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B53BC891-DD69-440F-84C4-4C2A8DF3D49E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B53BC891-DD69-440F-84C4-4C2A8DF3D49E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{572B9F7E-E8F2-4AC9-B546-CF253EB6DBFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{572B9F7E-E8F2-4AC9-B546-CF253EB6DBFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{572B9F7E-E8F2-4AC9-B546-CF253EB6DBFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{572B9F7E-E8F2-4AC9-B546-CF253EB6DBFC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{949B8B16-3915-41F6-8A41-514D68429E9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{949B8B16-3915-41F6-8A41-514D68429E9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{949B8B16-3915-41F6-8A41-514D68429E9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{949B8B16-3915-41F6-8A41-514D68429E9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

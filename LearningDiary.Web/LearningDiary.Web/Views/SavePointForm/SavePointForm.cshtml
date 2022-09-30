@@ -1,0 +1,40 @@
+﻿
+@model LearningDiary.API.Models.DTOs.SavePointCreate
+@*
+<head>
+    <link 
+</head>*@
+
+<body>
+    <content>
+        <div id="savePointForm">
+            @using (Html.BeginForm("Create", "SavePointEntry", FormMethod.Post))
+            {
+                <h2>Your Learning Save Point</h2>
+                <div>
+                    <p>
+                        <label id="nameLabel" for="">Title</label><br>
+                        @Html.TextAreaFor(x => x.Title)
+                    </p>
+                    <p>
+                        <label id="descriptionLabel" for="">Description</label><br>
+                        @Html.TextBoxFor(x => x.Description)
+                    </p>
+                    <p>
+                        <label id="tagsLabel" for="">Tags</label><br>
+                        @Html.TextBoxFor(x => x.Tags)
+                    </p>
+                    <p>
+                        <label id="resultLabel" for="">Results</label><br>
+                        @Html.TextBoxFor(x => x.Result)
+                    </p>
+                    <p>
+                        <label id="timeSpentLabel" for="">Time Spent</label><br>
+                        @Html.TextBoxFor(x => x.TimeSpent)
+                    </p>
+                </div>
+            }
+        </div>
+    </content>
+
+</body>
