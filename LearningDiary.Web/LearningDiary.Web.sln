@@ -3,11 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningDiary.Web", "LearningDiary.Web\LearningDiary.Web.csproj", "{E087548A-FEFF-453B-9841-2B64A5F92AD5}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningDiary.API", "LearningDiary.API\LearningDiary.API.csproj", "{8C8C2C92-F595-440D-A394-8AFF0FCE975E}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{AD8816E0-6D2A-4330-A697-7F9CD12297E0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningDiary.View", "..\..\LearningDiary.View\LearningDiary.View\LearningDiary.View.csproj", "{0852D52B-DE4A-45E2-B945-23172659648F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kubernetes", "Kubernetes", "{6F20FF9A-5452-4FFB-9CA0-0B7FDC101A29}"
+	ProjectSection(SolutionItems) = preProject
+		dash-acc.yml = dash-acc.yml
+		dash-roles.yml = dash-roles.yml
+		mongo.yml = mongo.yml
+		learningdiaryapi.yml = learningdiaryapi.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E087548A-FEFF-453B-9841-2B64A5F92AD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E087548A-FEFF-453B-9841-2B64A5F92AD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E087548A-FEFF-453B-9841-2B64A5F92AD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E087548A-FEFF-453B-9841-2B64A5F92AD5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8C8C2C92-F595-440D-A394-8AFF0FCE975E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8C8C2C92-F595-440D-A394-8AFF0FCE975E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C8C2C92-F595-440D-A394-8AFF0FCE975E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +31,10 @@ Global
 		{AD8816E0-6D2A-4330-A697-7F9CD12297E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD8816E0-6D2A-4330-A697-7F9CD12297E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD8816E0-6D2A-4330-A697-7F9CD12297E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0852D52B-DE4A-45E2-B945-23172659648F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0852D52B-DE4A-45E2-B945-23172659648F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0852D52B-DE4A-45E2-B945-23172659648F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0852D52B-DE4A-45E2-B945-23172659648F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

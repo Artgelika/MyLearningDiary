@@ -5,6 +5,7 @@ using LearningDiary.API.Models.Entities;
 using LearningDiary.API.Services.Interfaces;
 using Microsoft.AspNetCore.JsonPatch;
 using MongoDB.Driver;
+using System.Drawing;
 
 namespace LearningDiary.API.Services
 {
@@ -22,8 +23,27 @@ namespace LearningDiary.API.Services
             _mapper = mapper;
         }
 
-        public List<SavePoint> GetAll()
-            => _points.Find(point => true).ToList();
+        public List<SavePoint> GetAll() => _points.Find(point => true).ToList();
+
+        public List<SavePoint> GetAllByTags(string tagName)
+        {
+            List<SavePoint> savePointFilteredByTag = new();
+            List<SavePoint> savePointAll = GetAll();
+            foreach (SavePoint point in savePointAll)
+            {
+                if (point.Tags is not null)
+                {
+                    foreach (var tag in point.Tags)
+                    {
+                        if (tag == tagName)
+                        {
+                            savePointFilteredByTag.Add(point);
+                        }
+                    }
+                }
+            }
+            return savePointFilteredByTag;
+        }
 
         public SavePoint Get(string id)
             => _points.Find(point => point.SavePointId == id).FirstOrDefault();

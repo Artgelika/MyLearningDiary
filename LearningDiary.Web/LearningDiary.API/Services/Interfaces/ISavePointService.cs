@@ -6,6 +6,7 @@ namespace LearningDiary.API.Services.Interfaces
     public interface ISavePointService
     {
         List<SavePoint> GetAll();
+        List<SavePoint> GetAllByTags(string tagName);
         SavePoint Get(string id);
         SavePointRead Create(SavePointCreate savePoint);
         void Update(string id, SavePointUpdate savePointIn);

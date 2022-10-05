@@ -3,6 +3,7 @@ using LearningDiary.API.Models.Entities;
 using LearningDiary.API.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Drawing;
+using System.Xml.Linq;
 
 namespace LearningDiary.API.Controllers
 {
@@ -20,6 +21,17 @@ namespace LearningDiary.API.Controllers
         [HttpGet]
         public ActionResult<List<SavePoint>> GetAll()
             => _savePointService.GetAll();
+
+        [HttpGet("{tag}")]
+        public ActionResult<List<SavePoint>> GetAllByTag(string tag)
+        {
+            var savePointByTag = _savePointService.GetAllByTags(tag);
+            if (savePointByTag == null)
+            {
+                return NotFound();
+            }
+            return savePointByTag;
+        }
 
         [HttpGet("{id:length(24)}", Name = "GetSavePoint")]
         public ActionResult<SavePoint> Get(string id)
