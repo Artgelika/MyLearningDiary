@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: learningdiaryapi-deployment
+  labels:
+    app: learningdiaryapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: learningdiaryapi
+  template:
+    metadata:
+      labels:
+        app: learningdiaryapi
+    spec:
+      containers:
+      - name: learningdiaryapi 
+        image: artgelka/learning_diary_api:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        env:
+
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: learningdiaryapi-service
+spec:
+  type: ClusterIP  
+  selector:
+    app: learningdiaryapi
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
